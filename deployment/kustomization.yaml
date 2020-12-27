@@ -8,3 +8,6 @@ images:
 - name: app-1
   newName: mauriciopgomes/app-1
   newTag: abbf965934b04e8d361d753e9c0d0c692323e047
+- name: mauriciopgomes/app-1
+  newName: mauriciopgomes/app-1
+  newTag: 6a7b4cad2d3de1bf9a941e12417db0584d776e02
