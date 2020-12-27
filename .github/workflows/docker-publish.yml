@@ -15,7 +15,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         # tags: ${{ secrets.DOCKER_USERNAME }}${{ github.sha }}, ${{ secrets.DOCKER_USERNAME }}latest
-        tags: mauriciopgomes/app-1:latest
+        tags: latest
 
   deploy:
     name: Deploy
