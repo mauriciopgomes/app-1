@@ -34,7 +34,17 @@ jobs:
         name: Check out code
         uses: actions/checkout@v2
 
-      - name: Setup Kustomize
+      - 
+        name: Setup Kustomize
         uses: imranismail/setup-kustomize@v1
         with:
           kustomize-version: "3.6.1"
+
+      - 
+        name: Update Kubernetes resources
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        run: |
+          cd kustomize/base
+          kustomize edit set image app-1=$DOCKER_USERNAME/app-1:$GITHUB_SHA
+          cat kustomization.yaml
