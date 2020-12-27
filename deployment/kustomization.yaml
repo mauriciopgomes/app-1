@@ -3,3 +3,7 @@ kind: Kustomization
 resources:
 - app.yaml
 namespace: app
+images:
+- name: app-1
+  newName: /app-1
+  newTag: 6554c1f33f24f3b419a5d18baca1ccc057ed2421
