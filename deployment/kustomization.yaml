@@ -6,4 +6,4 @@ namespace: app
 images:
 - name: app-1
   newName: /app-1
-  newTag: 6c0c862519d6c979595d7deb61831d7ee0b5b960
+  newTag: db9e295c0a8765c91119e80b0d5050b17987b1a6
