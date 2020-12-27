@@ -20,7 +20,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: mauriciopgomes/app-1:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/app-1:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
