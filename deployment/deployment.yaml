@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: app-1
-        image: mauriciopgomes/app-1:latest
+        image: mauriciopgomes/app-1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -42,18 +42,3 @@ spec:
             cpu: "250m"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: app-1
-  namespace: app
-spec:
-  selector:
-    app: app-1
-  ports:
-    - name: http
-      protocol: TCP
-      port: 80
-  type: NodePort
