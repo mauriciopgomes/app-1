@@ -2,7 +2,8 @@ name: build-app
 on: push
 
 jobs:
-  Build:
+  build:
+    name: Build Docker Image
     runs-on: ubuntu-latest
     steps:
       -
