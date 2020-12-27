@@ -5,5 +5,5 @@ resources:
 namespace: app
 images:
 - name: app-1
-  newName: /app-1
-  newTag: db9e295c0a8765c91119e80b0d5050b17987b1a6
+  newName: mauriciopgomes/app-1
+  newTag: 679a0600f78f9bf264a269d720237c3553cbf669
