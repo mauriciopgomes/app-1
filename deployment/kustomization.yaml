@@ -9,4 +9,4 @@ namespace: app
 images:
 - name: mauriciopgomes/app-1
   newName: mauriciopgomes/app-1
-  newTag: 553048c766e468406def9464d39b5be6b68a2db0
+  newTag: a5fa679667b0a67ae2cce037672d300ad84d786e
