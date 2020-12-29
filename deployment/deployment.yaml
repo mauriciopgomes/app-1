@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-2
+  name: app-1
   namespace: app
   labels:
-    app: app-2
+    app: app-1
 spec:
   replicas: 1
   strategy:
@@ -14,14 +14,14 @@ spec:
       maxUnavailable: 0
   selector:
     matchLabels:
-      app: app-2
+      app: app-1
   template:
     metadata:
       labels:
-        app: app-2
+        app: app-1
     spec:
       containers:
-      - name: app-2
+      - name: app-1
         image: mauriciopgomes/app-1
         imagePullPolicy: Always
         ports:
