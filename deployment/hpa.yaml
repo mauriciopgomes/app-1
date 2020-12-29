@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: app-1
+  name: app-2
   namespace: app
 spec:
   maxReplicas: 20
@@ -9,7 +9,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: app-1
+    name: app-2
   metrics:
   - type: Resource
     resource:

@@ -21,5 +21,3 @@ spec:
   - hosts:
     - argocd.mauriciogomes.com.br
     secretName: argocd-secret # do not change, this is provided by Argo CD
-
-argocd-server-55f668886b-vf7f5
