@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "app-1.fullname" . }}-app-1
+  labels:
+    app: app-1
+  {{- include "app-1.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.app1.replicas }}
+  selector:
+    matchLabels:
+      app: app-1
+    {{- include "app-1.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        app: app-1
+      {{- include "app-1.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+      - env:
+        - name: KUBERNETES_CLUSTER_DOMAIN
+          value: {{ quote .Values.kubernetesClusterDomain }}
+        image: {{ .Values.app1.app1.image.repository }}:{{ .Values.app1.app1.image.tag
+          | default .Chart.AppVersion }}
+        imagePullPolicy: {{ .Values.app1.app1.imagePullPolicy }}
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        name: app-1
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources: {{- toYaml .Values.app1.app1.resources | nindent 10 }}
+        startupProbe:
+          httpGet:
+            path: /
+            port: 80
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always

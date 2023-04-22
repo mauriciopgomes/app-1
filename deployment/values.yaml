@@ -1,0 +1,17 @@
+app1:
+  app1:
+    image:
+      repository: mauriciopgomes/app-1
+      tag: latest
+    imagePullPolicy: Always
+    resources:
+      requests:
+        cpu: 250m
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 0
+  replicas: 1
+  type: ClusterIP
+kubernetesClusterDomain: cluster.local
