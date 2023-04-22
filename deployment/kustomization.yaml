@@ -1,13 +1,6 @@
-# apiVersion: kustomize.config.k8s.io/v1beta1
-# kind: Kustomization
-# resources:
-# - 00-namespace.yaml
-# - 01-deployment.yaml
-# - 02-service.yaml
-# - 03-hpa.yaml
-# - 04-ingress.yaml
-# namespace: app-1
-# images:
-# - name: mauriciopgomes/app-1
-#   newName: mauriciopgomes/app-1
-#   newTag: 5e1b97381ab9cbd9786e381a15265bf8bd615376
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: mauriciopgomes/app-1
+  newName: mauriciopgomes/app-1
+  newTag: 1bade874fb935de4d94d378f572456a800671af1
