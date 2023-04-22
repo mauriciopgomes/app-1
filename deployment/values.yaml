@@ -12,6 +12,6 @@ app1:
     port: 80
     protocol: TCP
     targetPort: 0
-  replicas: 1
+  replicas: 10
   type: ClusterIP
 kubernetesClusterDomain: cluster.local
