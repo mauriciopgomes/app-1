@@ -13,5 +13,5 @@ app1:
     protocol: TCP
     targetPort: 0
   replicas: 10
-  type: loadbalancer
+  type: LoadBalancer
 kubernetesClusterDomain: cluster.local
